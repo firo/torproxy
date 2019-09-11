@@ -2,8 +2,13 @@ FROM arm64v8/alpine
 MAINTAINER David Personette <dperson@gmail.com>
 
 # Install tor and privoxy
-RUN apk --no-cache --no-progress upgrade && \
-    apk --no-cache --no-progress add bash curl privoxy shadow tini tor && \
+RUN apk --no-cache --no-progress upgrade
+RUN apk --no-cache --no-progress add bash 
+RUN apk --no-cache --no-progress add curl 
+RUN apk --no-cache --no-progress add privoxy
+RUN apk --no-cache --no-progress add shadow
+RUN apk --no-cache --no-progress add tini 
+RUN apk --no-cache --no-progress add tor && \
     file='/etc/privoxy/config' && \
     sed -i 's|^\(accept-intercepted-requests\) .*|\1 1|' $file && \
     sed -i '/^listen/s|127\.0\.0\.1||' $file && \
