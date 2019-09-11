@@ -1,4 +1,4 @@
-FROM resin/armhf-alpine:3.5
+FROM arm32v7/alpine:3.7
 RUN [ “cross-build-start” ]
 
 MAINTAINER David Personette <dperson@gmail.com>
