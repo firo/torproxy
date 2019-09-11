@@ -1,4 +1,4 @@
-FROM arm32v7/alpine:3.7
+FROM arm32v7/alpine:latest
 RUN [ “cross-build-start” ]
 
 MAINTAINER David Personette <dperson@gmail.com>
