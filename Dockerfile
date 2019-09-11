@@ -1,4 +1,4 @@
-FROM docker.io/project31/aarch64-alpine-qemu:3.5
+FROM rycus86/armhf-alpine-qemu:latest
 RUN [ “cross-build-start” ]
 
 MAINTAINER David Personette <dperson@gmail.com>
