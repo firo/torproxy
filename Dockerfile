@@ -1,4 +1,6 @@
-FROM arm64v8/alpine:latest
+FROM docker.io/project31/aarch64-alpine-qemu:3.5
+RUN [ “cross-build-start” ]
+
 MAINTAINER David Personette <dperson@gmail.com>
 
 # Install tor and privoxy
@@ -68,3 +70,5 @@ HEALTHCHECK --interval=60s --timeout=15s --start-period=20s \
 VOLUME ["/etc/tor", "/var/lib/tor"]
 
 ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/torproxy.sh"]
+
+RUN [ “cross-build-end” ]
