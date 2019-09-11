@@ -1,7 +1,7 @@
 FROM arm32v7/alpine:latest
 ADD qemu-arm-static /usr/bin
 
-RUN [ “cross-build-start” ]
+# RUN [ “cross-build-start” ]
 
 MAINTAINER David Personette <dperson@gmail.com>
 
@@ -73,4 +73,4 @@ VOLUME ["/etc/tor", "/var/lib/tor"]
 
 ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/torproxy.sh"]
 
-RUN [ “cross-build-end” ]
+# RUN [ “cross-build-end” ]
