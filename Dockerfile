@@ -1,4 +1,4 @@
-FROM rycus86/armhf-alpine-qemu:latest
+FROM resin/armhf-alpine:3.5
 RUN [ “cross-build-start” ]
 
 MAINTAINER David Personette <dperson@gmail.com>
