@@ -1,4 +1,4 @@
-FROM alpine
+FROM arm64v8/alpine
 MAINTAINER David Personette <dperson@gmail.com>
 
 # Install tor and privoxy
