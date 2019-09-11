@@ -1,4 +1,6 @@
 FROM arm32v7/alpine:latest
+ADD qemu-arm-static /usr/bin
+
 RUN [ “cross-build-start” ]
 
 MAINTAINER David Personette <dperson@gmail.com>
