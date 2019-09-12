@@ -3,10 +3,10 @@ ADD qemu-arm-static /usr/bin
 
 # RUN [ “cross-build-start” ]
 
-MAINTAINER David Personette <dperson@gmail.com>
+# MAINTAINER David Personette <dperson@gmail.com>
 
 # Install tor and privoxy
-RUN apk --no-cache --no-progress upgrade
+# RUN apk --no-cache --no-progress upgrade
 RUN apk --no-cache --no-progress add bash 
 RUN apk --no-cache --no-progress add curl 
 RUN apk --no-cache --no-progress add privoxy
